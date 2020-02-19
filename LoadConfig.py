@@ -10,4 +10,5 @@ class Config:
         self.db = config['DATABASE']['db']
         self.user = config['DATABASE']['username']
         self.password = config['DATABASE']['password']
+        self.bridgeaddress = config['HUE']['BridgeAddress']
 
