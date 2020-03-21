@@ -10,5 +10,5 @@ def getCallData(token):
                           'Referer':'https://bryx911.com/dashboard',
                           'Host':'bryx911.com'})
     parsed = json.loads(r.data)
-    print(json.dumps(parsed, indent=4, sort_keys=True))
+    return parsed
 

@@ -1,11 +1,9 @@
 from phue import Bridge
 
 
-def getApi(BridgeAddress):
+def turnOnLights(BridgeAddress):
     b = Bridge(BridgeAddress)
     b.connect()
-    lights = b.lights
-    for l in lights:
-        print(l.name)
-
-
+    b.set_light('Tachi', 'on', True)
+    b.set_light('Tachi', 'bri', 254)
+    b.set_light('Tachi', 'hue', 154)
