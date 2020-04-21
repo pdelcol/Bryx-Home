@@ -1,6 +1,7 @@
 import urllib3
 import json
 
+
 def getCallData(token):
     http = urllib3.PoolManager()
     urllib3.disable_warnings()

@@ -1,7 +1,6 @@
 import configparser
 
 
-
 class Config:
     def __init__(self):
         config = configparser.ConfigParser()

@@ -6,4 +6,4 @@ def turnOnLights(BridgeAddress):
     b.connect()
     b.set_light('Tachi', 'on', True)
     b.set_light('Tachi', 'bri', 254)
-    b.set_light('Tachi', 'hue', 154)
+    b.set_light('Tachi', 'hue', 150)
