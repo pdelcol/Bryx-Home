@@ -4,13 +4,15 @@ import HueController
 import DatabaseConnector
 import time
 
-
 config = LoadConfig.Config()
+config.loadConfig()
 database = DatabaseConnector.Database(config)
+hue = HueController.HueBridge(config.bridgeaddress)
+
 
 def addCall(call):
+    hue.turnOnLights()
     database.mycol.insert_one(call)
-    HueController.turnOnLights(config.bridgeaddress)
 
 
 def updateCall(call):
@@ -31,10 +33,14 @@ def searchCalls(calls):
 
 def grabCalls():
     calls = BryxConnector.getCallData(config.token)
-    searchCalls(calls)
+    if calls != '':
+        searchCalls(calls)
+    else:
+        config.saveNewToken(BryxConnector.getToken(config))
+        config.loadConfig()
 
 
 while True:
     grabCalls()
-    time.sleep(5)
+    time.sleep(10)
     print("Checked Calls")

@@ -1,9 +1,12 @@
 from phue import Bridge
 
 
-def turnOnLights(BridgeAddress):
-    b = Bridge(BridgeAddress)
-    b.connect()
-    b.set_light('Tachi', 'on', True)
-    b.set_light('Tachi', 'bri', 254)
-    b.set_light('Tachi', 'hue', 150)
+class HueBridge:
+    def __init__(self, BridgeAddress):
+        self.b = Bridge(BridgeAddress)
+        self.b.connect()
+
+    def turnOnLights(self):
+        self.b.set_light('Tachi', 'on', True)
+        self.b.set_light('Tachi', 'bri', 254)
+        self.b.set_light('Tachi', 'hue', 150)
