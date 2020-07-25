@@ -41,6 +41,7 @@ def grabCalls():
 
 
 while True:
-    grabCalls()
-    time.sleep(10)
-    print("Checked Calls")
+     grabCalls()
+     time.sleep(10)
+     print("Checked Calls")
+

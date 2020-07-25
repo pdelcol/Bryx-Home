@@ -9,4 +9,5 @@ class HueBridge:
     def turnOnLights(self):
         self.b.set_light('Tachi', 'on', True)
         self.b.set_light('Tachi', 'bri', 254)
-        self.b.set_light('Tachi', 'hue', 150)
+        self.b.set_light('Tachi', 'sat', 254)
+        self.b.set_light('Tachi', 'hue', 0)
