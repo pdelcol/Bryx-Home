@@ -1,3 +1,4 @@
+## This project is on hiatus. There is a new feed from 911 that I will tap into. I want to also rewrite this project in Node so I can implement client functions
 # Bryx-Home
 This project is to pull calls from the Bryx API from their website and turn on my smart bulbs and preform other actions to alert me to a fire call
 ### Requirements
